@@ -102,7 +102,7 @@ class HomePage extends StatelessWidget {
 
             // Welcome User
             Text(
-              "Selamat datang, $username 💖",
+              "Selamat datang, Diva 💖",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
