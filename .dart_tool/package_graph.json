@@ -1,10 +1,10 @@
 {
   "roots": [
-    "uts_mobile"
+    "uts_mobile_programing"
   ],
   "packages": [
     {
-      "name": "uts_mobile",
+      "name": "uts_mobile_programing",
       "version": "1.0.0+1",
       "dependencies": [
         "cupertino_icons",
