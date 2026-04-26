@@ -1,10 +1,10 @@
 {
   "roots": [
-    "uts_mobile_programing"
+    "diva_app"
   ],
   "packages": [
     {
-      "name": "uts_mobile_programing",
+      "name": "diva_app",
       "version": "1.0.0+1",
       "dependencies": [
         "cupertino_icons",
