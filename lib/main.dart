@@ -86,7 +86,7 @@ class LoginPage extends StatelessWidget {
 
               SizedBox(height: 8),
 
-              // Forgot Password di kanan atas tombol login
+              // Forgot Password
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
@@ -148,6 +148,17 @@ class LoginPage extends StatelessWidget {
                   ),
 
                 ],
+              ),
+
+              SizedBox(height: 15),
+
+              // VERSION
+              Text(
+                "Version 1.0.0",
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.grey,
+                ),
               ),
 
             ],
