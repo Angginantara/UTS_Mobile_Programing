@@ -1,73 +1,53 @@
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
-  const RegisterPage({super.key});
+  RegisterPage();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple,
       appBar: AppBar(
-        title: Text("Daftar Akun"),
+        title: Text("Register"),
         backgroundColor: Colors.purple,
       ),
-      body: Center(
-        child: Container(
-          padding: EdgeInsets.all(20),
-          margin: EdgeInsets.all(20),
-          color: Colors.white,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
+      body: Padding(
+        padding: EdgeInsets.all(20),
+        child: Column(
+          children: [
 
-              Text(
-                "Register",
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: "Nama",
               ),
+            ),
 
-              SizedBox(height: 20),
+            SizedBox(height: 15),
 
-              TextField(
-                decoration: InputDecoration(
-                  labelText: "Nama Lengkap",
-                  border: OutlineInputBorder(),
-                ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: "Email",
               ),
+            ),
 
-              SizedBox(height: 15),
+            SizedBox(height: 15),
 
-              TextField(
-                decoration: InputDecoration(
-                  labelText: "Email",
-                  border: OutlineInputBorder(),
-                ),
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "Password",
               ),
+            ),
 
-              SizedBox(height: 15),
+            SizedBox(height: 20),
 
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: "Password",
-                  border: OutlineInputBorder(),
-                ),
-              ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Daftar"),
+            )
 
-              SizedBox(height: 20),
-
-              ElevatedButton(
-                onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text("Registrasi Berhasil")),
-                  );
-                },
-                child: Text("Daftar"),
-              )
-            ],
-          ),
+          ],
         ),
       ),
     );
