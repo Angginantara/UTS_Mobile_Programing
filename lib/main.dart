@@ -84,30 +84,43 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 20),
+              SizedBox(height: 8),
+
+              // Forgot Password di kanan atas tombol login
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                    minimumSize: Size(0, 0),
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ForgotPasswordPage(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    "Forgot Password?",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 12),
 
               ElevatedButton(
                 onPressed: () => login(context),
                 child: Text("Login"),
               ),
 
-              SizedBox(height: 10),
-
-              // FORGOT PASSWORD
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ForgotPasswordPage(),
-                    ),
-                  );
-                },
-                child: Text(
-                  "Forgot Password?",
-                  style: TextStyle(color: Colors.blue),
-                ),
-              ),
+              SizedBox(height: 12),
 
               // REGISTER
               Row(
