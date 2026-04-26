@@ -9,7 +9,7 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          "Nama: Diva\nNIM: 123456",
+          "Nama: Kadek Dio Angginantara Putra\nNIM: 2401020015",
           style: TextStyle(fontSize: 22),
           textAlign: TextAlign.center,
         ),
