@@ -8,7 +8,7 @@ class LoginPage extends StatelessWidget {
   final TextEditingController password = TextEditingController();
 
   void login(BuildContext context) {
-    if (username.text == "admin" && password.text == "1234") {
+    if (username.text == "Angginantara" && password.text == "12345678") {
       Navigator.push(
         context,
         MaterialPageRoute(
