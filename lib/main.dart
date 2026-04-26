@@ -27,9 +27,9 @@ class LoginPage extends StatelessWidget {
         MaterialPageRoute(builder: (context) => HomePage()),
       );
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Username / Password salah")),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Username / Password salah")));
     }
   }
 
@@ -50,8 +50,10 @@ class LoginPage extends StatelessWidget {
                 backgroundImage: AssetImage('assets/logo.jpeg'),
               ),
               SizedBox(height: 15),
-              Text("Diva App",
-                  style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold)),
+              Text(
+                "Diva App",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
               SizedBox(height: 20),
               TextField(
                 controller: username,
@@ -73,7 +75,7 @@ class LoginPage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () => login(context),
                 child: Text("Login"),
-              )
+              ),
             ],
           ),
         ),
