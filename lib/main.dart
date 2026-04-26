@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'register.dart';
+import 'forgot_password.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,9 +29,9 @@ class LoginPage extends StatelessWidget {
         MaterialPageRoute(builder: (context) => HomePage()),
       );
     } else {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text("Username / Password salah")));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Username / Password salah")),
+      );
     }
   }
 
@@ -45,16 +47,24 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+
               CircleAvatar(
                 radius: 45,
                 backgroundImage: AssetImage('assets/logo.jpeg'),
               ),
+
               SizedBox(height: 15),
+
               Text(
                 "Diva App",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
+
               SizedBox(height: 20),
+
               TextField(
                 controller: username,
                 decoration: InputDecoration(
@@ -62,7 +72,9 @@ class LoginPage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
+
               SizedBox(height: 10),
+
               TextField(
                 controller: password,
                 obscureText: true,
@@ -71,11 +83,60 @@ class LoginPage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
+
               SizedBox(height: 20),
+
               ElevatedButton(
                 onPressed: () => login(context),
                 child: Text("Login"),
               ),
+
+              SizedBox(height: 10),
+
+              // FORGOT PASSWORD
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ForgotPasswordPage(),
+                    ),
+                  );
+                },
+                child: Text(
+                  "Forgot Password?",
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ),
+
+              // REGISTER
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+
+                  Text("Belum punya akun? "),
+
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RegisterPage(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Daftar",
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
+
             ],
           ),
         ),
