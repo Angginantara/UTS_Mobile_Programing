@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
           children: [
 
             Text(
-              "Selamat datang, $username 💖",
+              "Selamat datang, $username ",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
